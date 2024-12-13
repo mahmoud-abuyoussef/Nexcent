@@ -6,8 +6,10 @@
 :root {
   --main-color: #4caf4f;
   --text-color: #717171;
+  --title-color: #4d4d4d;
   --black: #000000;
   --white: #ffffff;
+  --bg-alt: #f5f7fa;
   --bg: #263238;
   --h1-size: 40px;
   --h2-size: 36px;
@@ -47,9 +49,18 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
+.section-title {
+  margin-bottom: 20px;
+  color: var(--title-color);
+  font-size: var(--h2-size);
+}
 .section-description {
   margin: 20px 0;
   color: var(--text-color);
+  line-height: 1.5;
+}
+.text-center {
+  text-align: center;
 }
 .section-btn {
   display: block;
@@ -62,11 +73,19 @@ section {
 .special-text {
   color: var(--main-color);
 }
+@media (min-width: 992px) {
+  .col {
+    width: 45%;
+  }
+}
 a {
   text-decoration: none;
 }
 ul {
   list-style: none;
+}
+img {
+  max-width: 100%;
 }
 header {
   position: sticky;
@@ -143,6 +162,59 @@ header nav ul li .login {
     border-radius: 6px;
   }
 }
+.hero {
+  background-color: var(--bg-alt);
+}
 .hero .container {
   gap: 104px;
+}
+.clients-list {
+  gap: 100px;
+}
+.features .features-list {
+  gap: 100px;
+}
+.features .features-list .feature {
+  width: 260px;
+}
+.statistics {
+  background-color: var(--bg-alt);
+}
+.statistics .statistics-list {
+  gap: 100px;
+}
+.statistics .statistics-list .statistic {
+  gap: 20px;
+}
+.statistics .statistics-list .statistic span:first-child {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--title-color);
+}
+.statistics .statistics-list .statistic span:last-child {
+  color: var(--text-color);
+}
+.about {
+  background-color: var(--bg-alt);
+}
+.about .clients-list {
+  justify-content: start;
+  gap: 8px;
+}
+.test .cards-list {
+  gap: 100px;
+}
+.test .cards-list .card {
+  position: relative;
+  width: 270px;
+}
+.test .cards-list .card .info {
+  position: absolute;
+  bottom: -75px;
+  left: calc(50% - 120px);
+  width: 240px;
+  padding: 10px;
+  background-color: var(--white);
+  box-shadow: 2px 2px 20px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
 }
